@@ -1,1 +1,22 @@
-<h1>Test</h1>
+<h1>Caesar</h1>
+<h3>Verschlüsselung</h3>
+<hr>
+<form th:action="@{/caesarencrypting}" class="col-4">
+    <div class="mb-3">
+        <label for="cleartext" class="form-label">Text</label>
+        <input type="cleartext" class="form-control" id="cleartext" placeholder="Text" th:name="cleartext">
+    </div>
+
+    <div class="mb-3">
+        <label for="key" class="form-label">Schlüssel</label>
+        <input type="number" class="form-control" id="key" placeholder="Schlüssel" th:name="key">
+    </div>
+    
+    <div class="col-auto">
+        <button type="submit" class="btn btn-success mb-3">Verschlüsseln</button>
+    </div>
+    <a>Test</a>
+    <span th:text="${encryptedtext}">
+        Test
+    </span>
+</form>
